@@ -26,6 +26,8 @@ app.on("window-all-closed", () => {
     }
 })
 
+const pretty = require("pretty")
+
 ipcMain.on("newData", (event, data) => {
     let now = Date.now()
     let status
@@ -36,7 +38,7 @@ ipcMain.on("newData", (event, data) => {
         .then(async (res) => {
             const body = await res.text()
             win.webContents.send("line", {
-                response: body.toString(),
+                response: pretty(body.toString()),
                 latency: Date.now() - now,
                 status: res.status,
             })
