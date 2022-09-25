@@ -27,14 +27,19 @@ app.on("window-all-closed", () => {
 })
 
 ipcMain.on("newData", (event, data) => {
-    // console.log(data.value)
+    let now = Date.now()
+    let status
     fetch(data.value.url, {
         method: data.value.requestMethods,
         headers: data.value.header,
     })
-        .then((res) => res.text())
-        .then((body) => {
-            win.webContents.send("line", body.toString())
+        .then(async (res) => {
+            const body = await res.text()
+            win.webContents.send("line", {
+                response: body.toString(),
+                latency: Date.now() - now,
+                status: res.status,
+            })
         })
         .catch((err) => {
             win.webContents.send("error", err)

@@ -12,48 +12,73 @@ let keyList = document.getElementById("paramsBody1")
 let valueList = document.getElementById("paramsBody2")
 let desList = document.getElementById("paramsBody3")
 
-let headerKeyList = document.getElementById("paramsBody1")
-let headerValueList = document.getElementById("paramsBody2")
-let headerDesList = document.getElementById("paramsBody3")
+let headerKeyList = document.getElementById("headerBody1")
+let headerValueList = document.getElementById("headerBody2")
+let headerDesList = document.getElementById("headerBody3")
 var selectedOption = "Query"
 
 document.getElementById("addNewInput").addEventListener("click", () => {
+    console.log(selectedOption)
     if (selectedOption == "Query") {
-        let newDiv = document.createElement("div")
+        var newDiv = document.createElement("div")
         newDiv.classList.add("paramsBodyRows")
-        newDiv.innerHTML =
-            '<input type="text" placeholder="Enter Key" class="urlInput withBorder">'
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter key"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
         keyList.appendChild(newDiv)
 
-        let valueDiv = document.createElement("div")
+        var newDiv = document.createElement("div")
         newDiv.classList.add("paramsBodyRows")
-        newDiv.innerHTML =
-            '<input type="text" placeholder="Enter Value" class="urlInput withBorder">'
-        valueList.appendChild(valueDiv)
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter value"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
+        valueList.appendChild(newDiv)
 
-        // let desDiv = document.createElement("div")
-        // newDiv.classList.add("paramsBodyRows")
-        // newDiv.innerHTML =
-        //     '<input type="text" placeholder="Enter Description" class="urlInput withBorder">'
-        // desList.appendChild(desDiv)
-    } else {
-        let newDiv = document.createElement("div")
+        var newDiv = document.createElement("div")
         newDiv.classList.add("paramsBodyRows")
-        newDiv.innerHTML =
-            '<input type="text" placeholder="Enter Key" class="urlInput withBorder">'
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter Description"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
+        desList.appendChild(newDiv)
+    } else {
+        var newDiv = document.createElement("div")
+        newDiv.classList.add("paramsBodyRows")
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter key"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
         headerKeyList.appendChild(newDiv)
 
-        let valueDiv = document.createElement("div")
+        var newDiv = document.createElement("div")
         newDiv.classList.add("paramsBodyRows")
-        newDiv.innerHTML =
-            '<input type="text" placeholder="Enter Value" class="urlInput withBorder">'
-        headerValueList.appendChild(valueDiv)
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter value"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
+        headerValueList.appendChild(newDiv)
 
-        let desDiv = document.createElement("div")
+        var newDiv = document.createElement("div")
         newDiv.classList.add("paramsBodyRows")
-        newDiv.innerHTML =
-            '<input type="text" placeholder="Enter Description" class="urlInput withBorder">'
-        headerDesList.appendChild(desDiv)
+        var newInput = document.createElement("input")
+        newInput.type = "text"
+        newInput.placeholder = "Enter Description"
+        newInput.classList.add("urlInput")
+        newInput.classList.add("withBorder")
+        newDiv.appendChild(newInput)
+        headerDesList.appendChild(newDiv)
     }
 })
 // setListeners(1)

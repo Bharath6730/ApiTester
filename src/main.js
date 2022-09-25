@@ -7,5 +7,10 @@ function sendToBackend(data) {
 }
 
 ipcRenderer.on("line", function (event, store) {
-    document.getElementById("responseText").innerHTML = store
+    console.log(store)
+    document.getElementById("responseText").innerHTML = store.response
+    document.getElementById("latency").innerHTML =
+        "Latency:    " + store.latency
+    document.getElementById("statusCode").innerHTML =
+        "Status Code: " + store.status
 })
