@@ -6,11 +6,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Tester</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bfe05c0f59.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <input type="text" name="" id="urlInput">
-    <button id="submit">Submit</button>
+    <div class="documentContainer">
+        <!-- <div class="sideBar">
+        </div> -->
+        <!-- <h1>Hello From side bar</h1> -->
+        <div class="mainBody">
+            <div class="searchColumn">
+                <div class="filterDiv">
+
+                    <div class="filter pointer">
+                        <p id="dropDownSelectedItem">GET</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="dropDown hide">
+                        <div class="dropDownItems">
+                            <p>GET</p>
+                        </div>
+                        <div class="dropDownItems">
+                            <p>POST</p>
+                        </div>
+                        <div class="dropDownItems">
+                            <p>PUT</p>
+                        </div>
+                        <div class="dropDownItems">
+                            <p>PATCH</p>
+                        </div>
+                        <div class="dropDownItems">
+                            <p>DELETE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchBar">
+                    <input type="text" id="urlInput" placeholder="Enter a URL..." autocomplete="off" class="urlInput">
+                </div>
+                <div class="sendButton pointer" id="submit">
+                    <p>Send Request</p>
+                </div>
+            </div>
+            <div class="extraParameters">
+                <div class="paramHeaders">
+                    <div class="left" style="display: flex;">
+                        <div class="paramHeaderItems pointer" id="parameterOption">
+                            <p> Paramaters </p>
+                        </div>
+                        <div class="paramHeaderItems pointer" id="headerOption">
+                            <p> Header </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <i class="fas fa-plus pointer" id="addNewInput"
+                            style="padding-left: 3rem;padding-top:1rem;"></i>
+                    </div>
+                </div>
+                <div class="extraParamsBody">
+                    <div class="extraParamsBodyItems" id="parameterBody">
+                        <div class="paramsBodyColumns" id="paramsBody1">
+                            <div class="paramsBodyRows">
+                                <p>Query Key</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Key" class="urlInput withBorder">
+                            </div>
+                        </div>
+                        <div class="paramsBodyColumns" id="paramsBody2">
+                            <div class="paramsBodyRows">
+                                <p>Value</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Value" class="urlInput withBorder">
+                            </div>
+                        </div>
+                        <div class="paramsBodyColumns" id="paramsBody3">
+                            <div class="paramsBodyRows">
+                                <p>Description</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Description" class="urlInput withBorder">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extraParamsBodyItems hide" id="headerBody">
+                        <div class="paramsBodyColumns" id="headerBody1">
+                            <div class="paramsBodyRows">
+                                <p>Header Key</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Key" class="urlInput withBorder">
+                            </div>
+                        </div>
+
+                        <div class="paramsBodyColumns" id="headerBody2">
+                            <div class="paramsBodyRows">
+                                <p>Value</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Value" class="urlInput withBorder">
+                            </div>
+                        </div>
+
+                        <div class="paramsBodyColumns" id="headerBody3">
+                            <div class="paramsBodyRows">
+                                <p>Description</p>
+                            </div>
+                            <div class="paramsBodyRows">
+                                <input type="text" placeholder="Enter Description" class="urlInput withBorder">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="extraParameters" id="response" style="height: 50%;">
+                <textarea name="" id="responseText" style="width: 100%;border:none;" cols="30" rows="25"></textarea>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="./main.js"></script>

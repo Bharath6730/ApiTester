@@ -1,0 +1,213 @@
+:root {
+    --body-color: hsl(0, 0%, 98%);
+    --font-color: hsl(200, 15%, 8%);
+    --element-color: white;
+    --element-shadow: hsl(0, 0%, 80%);
+    --inset-start: inset(0% 6.5% 0 93.4%);
+    --clipElement-background: white;
+    --clipMain-background: hsl(0, 0%, 98%);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--body-color);
+    padding: 0%;
+    margin: 0%;
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: "Outfit";
+}
+.documentContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.sideBar {
+    width: 12%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+.mainBody {
+    overflow-y: scroll;
+    background-color: var(--body-color);
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2rem;
+}
+
+.searchColumn {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.searchBar {
+    position: relative;
+    /* left: 3%; */
+    box-sizing: border-box;
+    width: 60%;
+    background-color: var(--element-color);
+    height: 2.5rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 0.8rem;
+    box-shadow: 2px 2px 2px var(--element-shadow);
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+}
+
+.urlInput {
+    appearance: none;
+    border: none;
+    background: none;
+    height: 100%;
+    width: 80%;
+    font-family: inherit;
+    font-size: large;
+    color: var(--font-color);
+}
+.urlInput:focus {
+    outline: none;
+}
+
+.withBorder {
+    width: 100%;
+    border: 1px solid var(--element-shadow);
+    height: 2rem;
+    border-radius: 0.4rem;
+}
+
+.sendButton {
+    position: relative;
+    height: 2.5rem;
+    box-shadow: 2px 2px 2px var(--element-shadow);
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+    text-align: center;
+    /* background-color: #31c3bd; */
+}
+.sendButton > p {
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+    /* color: white; */
+    position: relative;
+    margin: 0%;
+    width: max-content;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.filterDiv {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+.filter {
+    display: flex;
+    position: relative;
+    background-color: var(--element-color);
+    width: 100%;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px var(--element-shadow);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 400ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.filter p {
+    font-weight: 600;
+}
+
+.dropDown {
+    background-color: var(--element-color);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 2px 2px 2px var(--element-shadow);
+    transition: background-color 400ms ease-in-out, box-shadow 400ms ease-in-out;
+}
+.dropDownItems {
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+    border-bottom: 1px solid var(--element-shadow);
+}
+.dropDownItems p {
+    font-weight: 600;
+    padding: 0.5rem;
+    position: relative;
+    margin: 0%;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.extraParameters {
+    width: 80%;
+    max-height: 90%;
+    margin: 3.5rem auto;
+    border-radius: 0.5rem;
+    background-color: var(--element-color);
+    padding: 0.6rem 1rem;
+    box-shadow: 2px 2px 2px var(--element-shadow);
+    border-radius: 0.3rem;
+    border-bottom: 1px solid var(--element-shadow);
+}
+.paramHeaders {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--element-shadow);
+}
+.paramHeaders > p {
+    font-weight: 900;
+}
+
+.extraParamsBodyItems {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    padding: 1rem 2rem;
+}
+
+.paramsBodyColumns {
+    width: 100%;
+    /* height: 5rem; */
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+
+.paramsBodyRows {
+    margin-left: 10%;
+    margin-top: 0.5rem;
+    width: 80%;
+    height: 2rem;
+    /* background-color: red; */
+    place-content: center;
+    place-items: center;
+}
+
+.paramsBodyRows > p {
+    text-align: center;
+    padding-bottom: 0.4rem;
+    /* margin-bottom: ; */
+}
+
+.hide {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
